@@ -22,5 +22,15 @@ withMaven(maven : 'LocalMaven')
 	}
 	  }
 	                }
+					
+stage ("Package") {
+
+steps {
+withMaven(maven : 'LocalMaven')
+   {
+   sh 'mvn package'
+   }					
+					
+					
 }
 }
