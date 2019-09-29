@@ -22,4 +22,3 @@ withMaven(maven: 'LocalMaven')
 	}
 }
 }
-}
