@@ -11,6 +11,8 @@ git 'https://github.com/rakshit2607/maven-project'
 }
 
  }
+ 
+ 
 {
 
 stage ("Code Test") {
@@ -22,7 +24,10 @@ withMaven(maven : 'LocalMaven')
 	}
 	  }
 	                }
-					
+}
+
+
+{					
 stage ("Package") {
 
 steps {
@@ -31,6 +36,7 @@ withMaven(maven : 'LocalMaven')
    sh 'mvn package'
    }					
 					
-					
+	   }			
+                 }
 }
 }
