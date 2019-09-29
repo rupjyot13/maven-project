@@ -9,8 +9,9 @@ pipeline
 stage ("scm checkout") {
 git 'https://github.com/rakshit2607/maven-project'
 }
- }
 
+ }
+{
 
 stage ("Code Test") {
 
@@ -21,4 +22,5 @@ withMaven(maven : 'LocalMaven')
 	}
 	  }
 	                }
+}
 }
