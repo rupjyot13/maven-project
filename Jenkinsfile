@@ -2,18 +2,24 @@ pipeline
 {
 
  agent any
+ stages
  {
 
 
-stage "scm checkout" {
+stage ("scm checkout") {
 git 'https://github.com/rakshit2607/maven-project.git'
 }
+}
+}
 
-stage "Code Test" {
-withMaven(maven: 'LocalMaven') {
+stage ("Code Test") {
+
+steps {
+withMaven(maven: 'LocalMaven') 
+    {
     sh  'mvn test'
 	}
-
+	}
 }
 }
 }
